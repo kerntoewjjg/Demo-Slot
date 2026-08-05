@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Free-to-play demo slot arcade. No deposits, withdrawals, or real money.">
+  <title>Neon Reels — Demo Slot Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">✦</span> Neon Reels <small>DEMO</small></div>
+    <div class="balance"><span>🪙</span><strong id="balance">100,000</strong></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">FREE PLAY • NO REAL MONEY</p>
+        <h1>Spin. Win. Repeat.</h1>
+        <p class="sub">A self-contained slot arcade using virtual coins only.</p>
+      </div>
+      <button id="resetBtn" class="ghost">Reset coins</button>
+    </section>
+
+    <section class="games" aria-label="Games">
+      <button class="game-tab active" data-game="neon">Neon Fruits</button>
+      <button class="game-tab" data-game="stars">Lucky Stars</button>
+      <button class="game-tab" data-game="gems">Gem Rush</button>
+    </section>
+
+    <section class="machine">
+      <div class="machine-head">
+        <div>
+          <span class="pill">DEMO ONLY</span>
+          <h2 id="gameName">Neon Fruits</h2>
+        </div>
+        <div class="bet-box">
+          <button id="betDown" aria-label="Decrease bet">−</button>
+          <span>Bet <b id="bet">100</b></span>
+          <button id="betUp" aria-label="Increase bet">+</button>
+        </div>
+      </div>
+
+      <div class="reels" id="reels" aria-live="polite">
+        <div class="reel"><span>🍒</span></div>
+        <div class="reel"><span>💎</span></div>
+        <div class="reel"><span>7️⃣</span></div>
+      </div>
+
+      <div class="payline">— — — <span>PAYLINE</span> — — —</div>
+      <p class="result" id="result">Press SPIN to play with demo coins.</p>
+
+      <button id="spinBtn" class="spin">SPIN</button>
+      <p class="fine">Virtual coins have no cash value. No deposits or withdrawals.</p>
+    </section>
+
+    <section class="stats">
+      <div><span>Total spins</span><strong id="spins">0</strong></div>
+      <div><span>Session wins</span><strong id="wins">0</strong></div>
+      <div><span>Best win</span><strong id="bestWin">0</strong></div>
+    </section>
+
+    <section class="history">
+      <div class="section-title"><h3>Spin history</h3><button id="clearHistory">Clear</button></div>
+      <div id="historyList" class="history-list"><p class="empty">No spins yet.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Neon Reels</strong> — a free demo project for GitHub Pages / static hosting.
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+:root{
+  --bg:#090b13;--panel:#111523;--panel2:#171c2c;--text:#f7f8ff;--muted:#9da5bc;
+  --accent:#8d7cff;--accent2:#ff4fd8;--line:#292f44;--good:#54e6a5;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:
+radial-gradient(circle at 15% 0%,#25204b 0,transparent 32%),radial-gradient(circle at 85% 10%,#3a1640 0,transparent 28%),var(--bg);
+color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+button{font:inherit;color:inherit;cursor:pointer}.topbar{height:64px;display:flex;align-items:center;justify-content:space-between;
+padding:0 18px;border-bottom:1px solid var(--line);background:#090b13e8;backdrop-filter:blur(12px);position:sticky;top:0;z-index:5}
+.brand{font-weight:900;letter-spacing:.2px}.brand-mark{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;
+background:linear-gradient(135deg,var(--accent),var(--accent2));margin-right:8px}.brand small{font-size:9px;color:#c7c1ff;margin-left:5px}
+.balance{background:#151a29;border:1px solid var(--line);padding:7px 11px;border-radius:999px;display:flex;gap:7px;align-items:center}
+main{width:min(920px,100%);margin:auto;padding:24px 16px 48px}.hero{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:10px 0 22px}
+.eyebrow{color:#b9b1ff;font-size:11px;font-weight:800;letter-spacing:1.5px;margin:0 0 5px}.hero h1{font-size:clamp(28px,7vw,48px);line-height:1;margin:0 0 9px}
+.sub{color:var(--muted);margin:0}.ghost,.section-title button{background:transparent;border:1px solid var(--line);padding:9px 12px;border-radius:10px}
+.games{display:flex;gap:8px;overflow:auto;margin-bottom:14px}.game-tab{white-space:nowrap;border:1px solid var(--line);background:#101422;padding:10px 14px;border-radius:999px}
+.game-tab.active{background:#27204d;border-color:#6659b7}.machine{background:linear-gradient(180deg,#151a2a,#0f1320);border:1px solid var(--line);
+border-radius:22px;padding:18px;box-shadow:0 20px 60px #0006}.machine-head{display:flex;justify-content:space-between;align-items:center;gap:15px}
+.machine h2{margin:4px 0 0;font-size:22px}.pill{font-size:9px;font-weight:900;letter-spacing:1px;color:#a9ffe0;background:#153629;padding:4px 7px;border-radius:999px}
+.bet-box{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:5px}.bet-box button{width:30px;height:30px;border:0;border-radius:8px;background:#20263a}
+.reels{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:18px 0 7px}.reel{height:150px;display:grid;place-items:center;border:1px solid #333b55;border-radius:16px;
+background:radial-gradient(circle,#272e49,#111624);font-size:clamp(50px,15vw,82px);box-shadow:inset 0 0 30px #0008;overflow:hidden}
+.reel.spinning span{animation:blur .08s linear infinite}.reel.win{animation:pop .5s ease}.payline{text-align:center;color:#606981;font-size:10px;letter-spacing:2px}.payline span{color:#8c95ae}
+.result{text-align:center;min-height:28px;color:#c8cee0;margin:12px 0}.result.good{color:var(--good);font-weight:800}.result.bad{color:#ff899d}
+.spin{display:block;width:100%;border:0;border-radius:14px;padding:15px;font-weight:1000;letter-spacing:1px;background:linear-gradient(100deg,var(--accent),var(--accent2));
+box-shadow:0 10px 30px #8d7cff33}.spin:disabled{opacity:.5;cursor:not-allowed}.fine{text-align:center;color:#707991;font-size:11px;margin:10px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:14px 0}.stats div,.history{background:#111522;border:1px solid var(--line);border-radius:16px;padding:14px}
+.stats span{display:block;color:var(--muted);font-size:11px}.stats strong{font-size:20px}.history{margin-top:14px}.section-title{display:flex;justify-content:space-between;align-items:center}
+.section-title h3{margin:0}.history-list{display:grid;gap:7px;margin-top:10px}.history-row{display:flex;justify-content:space-between;padding:9px 10px;background:#171c2b;border-radius:10px;font-size:13px}
+.empty{color:var(--muted);text-align:center;margin:18px}.win-text{color:var(--good)}footer{text-align:center;color:#687188;padding:25px 15px 45px;font-size:12px}
+@keyframes blur{0%{transform:translateY(-8px);filter:blur(2px)}50%{transform:translateY(8px);filter:blur(4px)}100%{transform:translateY(-8px);filter:blur(2px)}}
+@keyframes pop{50%{transform:scale(1.06);box-shadow:0 0 35px #8d7cff77,inset 0 0 30px #0008}}
+@media(max-width:600px){.hero{align-items:start;flex-direction:column}.hero .ghost{align-self:stretch}.reel{height:125px}.machine{padding:14px}}
